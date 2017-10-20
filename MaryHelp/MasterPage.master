@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" title="Style1">
+    <script src="js/functions.js"></script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            margin-left: 0px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+		    <div class="top">
+                <div class="logo">Clean me now!</div>
+                <div class="about" id="lo" runat="server"><a href="Login.aspx">Log out</a></div>
+                <div class="about"><a href="#">About Us</a></div>
+                <div class="about" id="hm" runat="server"><a href="Home.aspx">Home</a></div>
+                <div class="about" id="sg" runat="server"><a href="SignUp.aspx?mode=signup">Sign Up</a></div>
+                <div class="greetings" id="gr" runat="server">
+                    <asp:Label ID="lblUser" runat="server" Width="180px"></asp:Label>
+                </div>
+                <div id="log" runat="server">
+                    <div class="loginbar"><asp:Button CssClass="loginbutton" ID="btnLogin" runat="server" Text="Log In" OnClick="btnLogin_Click" TabIndex="3" /></div>
+                    <div class="loginbar"><asp:TextBox ID="txtPass" runat="server" CssClass="loginPass" placeholder="Password" TextMode="Password" required TabIndex="2"></asp:TextBox></div>
+                    <div class="loginbar"><asp:TextBox ID="txtEmail" runat="server" CssClass="loginEmail" placeholder="E-Mail" autofocus required TabIndex="1"></asp:TextBox></div>
+                </div>
+		    </div>            
+		    <div class="main">
+			    <div class="centralcontainer">
+                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+        <footer>&copy; All rights reserved</footer>
+    </form>
+</body>
+</html>

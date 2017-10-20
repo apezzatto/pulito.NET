@@ -1,0 +1,99 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Sign_Up.aspx.cs" Inherits="Sign_Up" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" title="Style1" />
+</head>
+<body>
+    <form id="form1" runat="server">
+		<div class="top">
+            <div class="logo">Clear me now!_</div>
+            <div class="about"><a href="#">About Us</a></div>
+		</div>            
+		<div class="main">
+			<div class="centralcontainer">
+                <asp:Label ID="lblError" CssClass="error" runat="server" Text=""></asp:Label>
+                <br />
+                <br />
+                <table id="signup">
+				    <tr>
+					    <th class="header" colspan="2">
+						    Sign Up
+					    </th>
+				    </tr>
+				    <tr>
+					    <td class="label">Name</td>
+					    <td>
+                            <asp:TextBox ID="txtName" runat="server" TextMode="SingleLine" MaxLength="20" Width="180px"></asp:TextBox>
+                        </td>
+				    </tr>
+				    <tr>
+					    <td class="label">Middle Name</td>
+					    <td>
+                            <asp:TextBox ID="txtMiddle" runat="server" TextMode="SingleLine" MaxLength="30" Width="180px"></asp:TextBox>
+                        </td>
+				    </tr>
+				    <tr>
+					    <td class="label">Last Name</td>
+					    <td>
+                            <asp:TextBox ID="txtLast" runat="server" TextMode="SingleLine" MaxLength="30" Width="180px"></asp:TextBox>
+                        </td>
+				    </tr>
+				    <tr>
+					    <td class="label">Address Line 1</td>
+					    <td>
+                            <asp:TextBox ID="txtAddress1" runat="server" TextMode="SingleLine" MaxLength="100" Width="180px"></asp:TextBox>
+                        </td>
+				    </tr>
+                    <tr>
+					    <td class="label">Address Line 2 <em>(optional)</em></td>
+					    <td>
+                            <asp:TextBox ID="txtAddress2" runat="server" TextMode="SingleLine" MaxLength="50" Width="180px"></asp:TextBox>
+                        </td>
+				    </tr>
+				    <tr>
+					    <td class="label">Zip Code</td>
+					    <td>
+                            <asp:TextBox ID="txtZip" runat="server" TextMode="SingleLine" MaxLength="6" Width="180px"></asp:TextBox>
+                        </td>
+				    </tr>
+                    <tr>
+					    <td class="label">E-Mail</td>
+					    <td>
+                             <asp:TextBox ID="txtEmail" runat="server" TextMode="SingleLine" MaxLength="50" Width="180px"></asp:TextBox>
+                        </td>
+				    </tr>
+                    <tr>
+					    <td class="label">Confirm E-Mail</td>
+					    <td>
+                            <asp:TextBox ID="txtEmailConf" runat="server" TextMode="SingleLine" MaxLength="50" Width="180px"></asp:TextBox>
+                        </td>
+				    </tr>
+				    <tr>
+					    <td class="label">Password</td>
+					    <td>
+                            <asp:TextBox ID="txtPass" runat="server" TextMode="Password" MaxLength="8" Width="180px"></asp:TextBox>
+                        </td>
+				    </tr>
+
+				    <tr>
+					    <td class="label">Confirm Password</td>
+					    <td>
+                            <asp:TextBox ID="txtPassConf" runat="server" TextMode="Password" MaxLength="8" Width="180px"></asp:TextBox>
+                        </td>
+				    </tr>
+				    <tr>
+					    <td colspan="2" class="bottom">
+						    <input type="reset" value="Reset" class="fancybutton" /><asp:Button ID="btnCreateAccount" runat="server" Text="Create Account" CssClass="fancybutton" OnClick="btnCreateAccount_Click" />
+					    </td>
+				    </tr>	
+			    </table>
+            </div>
+		</div>		
+		<footer>&copy; All rights reserved</footer>
+    </form>
+</body>
+</html>
