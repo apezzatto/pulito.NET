@@ -23,31 +23,54 @@ public partial class LogIn : System.Web.UI.Page
         }
     }
 
-    protected void btnLogIn_Click(object sender, EventArgs e)
-    {
-        //User user = null;
+    //protected void btnLogIn_Click(object sender, EventArgs e)
+    //{
+    //    //User user = null;
 
-        //try
-        //{
-        //    user = new User();
-        //    user.LogIn(txtEmail.Text.ToLower(), txtPass.Text.Trim());
+    //    //try
+    //    //{
+    //    //    user = new User();
+    //    //    user.LogIn(txtEmail.Text.ToLower(), txtPass.Text.Trim());
 
-        //    Session["user"] = (User) user;
+    //    //    Session["user"] = (User) user;
 
-        //    Response.Redirect("Home.aspx", true);
-        //}
-        //catch (Exception ex)
-        //{
-        //    lblError.Text = ex.Message;
-        //}
-        //finally
-        //{
-        //    user = null;
-        //}
-    }
+    //    //    Response.Redirect("Home.aspx", true);
+    //    //}
+    //    //catch (Exception ex)
+    //    //{
+    //    //    lblError.Text = ex.Message;
+    //    //}
+    //    //finally
+    //    //{
+    //    //    user = null;
+    //    //}
+    //}
 
     protected void txtEmail_TextChanged(object sender, EventArgs e)
     {
 
+    }
+
+    protected void btnLogin_Click(object sender, EventArgs e)
+    {
+        User user = null;
+
+        try
+        {
+            user = new User();
+            user.LogIn(txtEmail.Text.ToLower(), txtPass.Text.Trim());
+
+            Session["user"] = (User)user;
+
+            Response.Redirect("Home.aspx", true);
+        }
+        catch (Exception ex)
+        {
+            //lblError.Text = ex.Message;
+        }
+        finally
+        {
+            user = null;
+        }
     }
 }

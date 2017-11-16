@@ -3,21 +3,18 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-<table id="hist">
-		<tr>
-			<th class="header">
-				My History
-			</th>
-		</tr>
+<div id="hist">
+    <div>
+		<h2 class="header">My History</h2>
+        <asp:Button ID="btnCity" CssClass="btn btn-info btn-city" runat="server" Text="My City" Width="105px" OnClick="btnCity_Click" />
+        <asp:Button ID="btnNeighborhood" CssClass="btn btn-info btn-ngh" runat="server" Text="My Neighborhood" Width="165px" OnClick="btnNeighborhood_Click" /><br />
+        <asp:Label ID="lblError" ForeColor="Red" runat="server" Font-Bold="True"></asp:Label><br />
+        <asp:Label ID="lblMessage" ForeColor="#006600" runat="server" Font-Bold="True"></asp:Label>
+	</div>
+    
+    <table>
         <tr>
-            <td>
-                <asp:Button ID="btnCity" CssClass="fancybutton" runat="server" Text="In My City" Width="105px" OnClick="btnCity_Click" /><asp:Button ID="btnNeighborhood" CssClass="fancybutton" runat="server" Text="In My Neighborhood" Width="165px" OnClick="btnNeighborhood_Click" /><br />
-                <asp:Label ID="lblError" ForeColor="Red" runat="server" Font-Bold="True" Width="900px"></asp:Label><br />
-                <asp:Label ID="lblMessage" ForeColor="#006600" runat="server" Font-Bold="True" Width="900px"></asp:Label>
-            </td>
-        </tr>
-		<tr>
-			<td class="bottom">
+            <td class="bottom">
                 <asp:GridView ID="grdHistory" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False" Font-Size="10px" AllowPaging="True" AllowSorting="True" CellSpacing="1">
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                     <Columns>
@@ -54,7 +51,8 @@
                     <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                 </asp:GridView>
 			</td>
-		</tr>
+        </tr>
     </table>
+</div>
 </asp:Content>
 

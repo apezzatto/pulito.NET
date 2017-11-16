@@ -12,5 +12,7 @@ public partial class Home : System.Web.UI.Page
     {
         if ((User)Session["user"] == null)
             Response.Redirect("Login.aspx?message=mustlogin");
+        
+        
     }
 }

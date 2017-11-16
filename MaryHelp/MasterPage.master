@@ -5,43 +5,110 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css" title="Style1">
     <script src="js/functions.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <%--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>--%>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/Content/bootstrap.css"/>
+    <%--<link rel="stylesheet" type="text/css" href="css/Content/bootstrap.min.css"/>--%>
+    <link rel="stylesheet" type="text/css" href="css/style1.css"/>
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
-    <style type="text/css">
-        .auto-style1 {
-            margin-left: 0px;
-        }
-    </style>
+    
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-		    <div class="top">
-                <div class="logo">Clean me now!</div>
-                <div class="about" id="lo" runat="server"><a href="Login.aspx">Log out</a></div>
-                <div class="about"><a href="#">About Us</a></div>
+
+		    <%--<div class="top">--%>
+                <%--<div class="logo">Clean me now!</div>
                 <div class="about" id="hm" runat="server"><a href="Home.aspx">Home</a></div>
+                <div class="about"><a href="#">About Us</a></div>
+                <div class="about" id="lo" runat="server"><a href="Login.aspx">Log out</a></div>           
                 <div class="about" id="sg" runat="server"><a href="SignUp.aspx?mode=signup">Sign Up</a></div>
                 <div class="greetings" id="gr" runat="server">
                     <asp:Label ID="lblUser" runat="server" Width="180px"></asp:Label>
-                </div>
-                <div id="log" runat="server">
-                    <div class="loginbar"><asp:Button CssClass="loginbutton" ID="btnLogin" runat="server" Text="Log In" OnClick="btnLogin_Click" TabIndex="3" /></div>
-                    <div class="loginbar"><asp:TextBox ID="txtPass" runat="server" CssClass="loginPass" placeholder="Password" TextMode="Password" required TabIndex="2"></asp:TextBox></div>
-                    <div class="loginbar"><asp:TextBox ID="txtEmail" runat="server" CssClass="loginEmail" placeholder="E-Mail" autofocus required TabIndex="1"></asp:TextBox></div>
-                </div>
-		    </div>            
-		    <div class="main">
-			    <div class="centralcontainer">
-                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-        
-                    </asp:ContentPlaceHolder>
-                </div>
-            </div>
+                </div>--%>
+
+               <%-- <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+                    <a class="navbar-brand" href="Home.aspx">
+                        <img class="center" src="css/logo_3.png" width="80" height="80" alt=""/>
+                    </a>
+                    <ul class="list-group list-group-horizontal" >
+                        <li class="list-group-item" id="gr" runat="server"><asp:Label ID="lblUser" runat="server"></asp:Label></li>
+                    </ul>
+                    <ul class="list-group list-group-horizontal">
+                        <li class="list-group-item" id="hm" runat="server"><a href="Home.aspx">Home</a></li>
+                        <li class="list-group-item"><a href="#">About Us</a></li>
+                        <li class="list-group-item" id="lo" runat="server"><a href="Login.aspx">Log out</a></li>
+                        <li class="list-group-item" id="sg" runat="server"><a href="SignUp.aspx?mode=signup">Sign Up</a></li>
+                    </ul>
+                    --%>
+                    
+                    
+        <nav class="navbar navbar-inverse">
+            <a class="navbar-brand" href="Home.aspx">
+                <img src="css/logo_3.png" width="80" height="80" alt=""/>
+            </a>
+        <div class="container">  
+        <div class="navbar-header"> 
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
         </div>
+            <div class="list-group list-group-horizontal gree" >
+                <span class="list-group-item" id="Li1" runat="server">
+                    <asp:Label ID="lblUser" runat="server"></asp:Label>
+                </span>
+            </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="list-group-item" id="hm" runat="server"><a href="Home.aspx">Home</a></li>
+            <li class="list-group-item"><a href="#">About Us</a></li>
+            <li class="list-group-item" id="lo" runat="server"><a href="Login.aspx">Log out</a></li>
+            <li class="list-group-item" id="sg" runat="server"><a href="SignUp.aspx?mode=signup">Sign Up</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+                <%--</nav>--%>
+
+                <%--Login Block--%>
+                <%--<section class="login-block">
+                    <div class="container">
+	                    <div class="row">
+                    		<div class="col-md-4 login-sec">
+		                        <h2 class="text-center">Login Now</h2>--%>
+<%--                                            <div id="log" runat="server">   
+                                                 <div class="form-group">
+                                                    <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="E-Mail" autofocus required TabIndex="1"></asp:TextBox>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1" class="text-uppercase">Email</label>
+                                                    <asp:TextBox ID="txtPass" runat="server" CssClass="form-control" placeholder="Password" TextMode="Password" required TabIndex="2"></asp:TextBox>
+                                                </div>
+                                                <asp:Button CssClass="btn btn-login float-right" ID="btnLogin" runat="server" Text="Log In" OnClick="btnLogin_Click" TabIndex="3" />
+                                            </div>--%>
+                             <%--   </div>
+                            </div>
+                        </div>
+                     </section>--%>
+		                                    <%--<div class="main">--%>
+			                                    <div class="centralcontainer">
+                                                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                                                        
+                                                    </asp:ContentPlaceHolder>
+                                                </div>
+                                            <%--</div>--%>
+        <%--</div>--%>
         <footer>&copy; All rights reserved</footer>
     </form>
+
 </body>
 </html>

@@ -1,114 +1,70 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="JobOffer.aspx.cs" Inherits="JobOffer" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <style type="text/css">
-        .auto-style2 {
-            border-style: none;
-            border-color: inherit;
-            border-width: medium;
-            display: inline-block;
-            border-radius: 4px;
-            background-color: #d4b34a;
-            color: white;
-            text-align: center;
-            font-size: 12px;
-            padding: 8px;
-            transition: all 0.5s;
-            cursor: pointer;
-            margin: 5px;
-        }
-    </style>
+       
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <table id="jobcreation">
-		<tr>
-			<th class="header" colspan="2">
-				Job Creation
-			</th>
-		</tr>
-        <tr>
-            <td>
-                <table>
-				    <tr>
-					    <td class="label">Rooms</td>
-					    <td>
-                            <asp:TextBox ID="txtRooms" runat="server" Width="45px" TextMode="Number" MaxLength="1" OnTextChanged="txtRooms_TextChanged">0</asp:TextBox>
-                        </td>
-				    </tr>
-				    <tr>
-					    <td class="label">Bathrooms</td>
-					    <td>
-                            <asp:TextBox ID="txtBaths" runat="server" TextMode="Number" Width="45px" MaxLength="1">0</asp:TextBox>
-                        </td>
-				    </tr>
-				    <tr>
-					    <td class="label">Windows</td>
-					    <td>
-                            <asp:TextBox ID="txtWindows" runat="server" TextMode="Number" Width="45px" MaxLength="2">0</asp:TextBox>
-                        </td>
-				    </tr>
-                    <tr>
-					    <td class="label">Mirrors</td>
-					    <td>
-                                <asp:TextBox ID="txtMirrors" runat="server" TextMode="Number" Width="45px" MaxLength="2">0</asp:TextBox>
-                        </td>
-				    </tr>
-		            <tr>
-			            <td>Date Required</td>
-			            <td>
-			                <asp:TextBox ID="txtDtRequired" runat="server" TextMode="DateTime" Width="64px" required></asp:TextBox>
-                            
-			            </td>
-		            </tr>
-			    </table>
-            </td>
-            <td>
-                <table>
-				    <tr>
-					    <td class="label">Vacuum</td>
-					    <td>
+    <div class="contentJobOffer">
 
-                            <asp:CheckBox ID="chkVacuum" runat="server" />
-
-                        </td>
-				    </tr>
-                    <tr>
-					    <td class="label">Laundry</td>
-					    <td>
-
-                            <asp:CheckBox ID="chkLaundry" runat="server" />
-
-                        </td>
-				    </tr>
-				    <tr>
-					    <td class="label">Garage</td>
-					    <td>
-
-                            <asp:CheckBox ID="chkGarage" runat="server" />
-
-                        </td>
-				    </tr>
-                    <tr>
-					    <td class="label">Dishes</td>
-					    <td>
-
-                            <asp:CheckBox ID="chkDishes" runat="server" />
-
-                        </td>
-				    </tr>
-		            <tr>
-			            <td>Start time</td>
-			            <td>
-			                <asp:TextBox ID="txtStartTime" runat="server" TextMode="DateTime" Width="45px" required></asp:TextBox>
-                            
-			            </td>
-		            </tr>
-                </table>
-            </td>                        
-        </tr>
-		<tr>
-			<td colspan="2" class="bottom">
-				<asp:Button ID="btnCalculate" runat="server" OnClick="btnCalculate_Click" Text="Calculate" CssClass="auto-style2" Width="82px" />
+	<h2>Job Creation</h2>
+        <div class="clearfix">
+        <div class="form-group">
+            <ul>
+                <li class="form-control">
+                    <span class="label">Rooms</span>
+                    <asp:TextBox ID="txtRooms" runat="server" Width="45px" TextMode="Number" MaxLength="1" OnTextChanged="txtRooms_TextChanged" CssClass="rightAlign">0</asp:TextBox>
+                </li>
+                <li class="form-control">
+                    <span class="label">Bathrooms</span>
+                    <asp:TextBox ID="txtBaths" CssClass="rightAlign" runat="server" TextMode="Number" Width="45px" MaxLength="1">0</asp:TextBox>
+                </li> 
+                <li class="form-control">
+                    <span class="label">Windows</span>
+                    <asp:TextBox ID="txtWindows" CssClass="rightAlign" runat="server" TextMode="Number" Width="45px" MaxLength="2">0</asp:TextBox>
+                </li>
+                <li class="form-control">
+                    <span class="label">Mirrors</span>
+                    <span class="right_align"><asp:TextBox ID="txtMirrors" CssClass="rightAlign" runat="server" TextMode="Number" Width="45px" MaxLength="2">0</asp:TextBox></span>
+                </li>
+                
+            </ul>
+            
+        </div>
+					   
+        <div class="blocks rightBlock">
+            <div class="clearfix">
+            <ul>
+                <li class="form-control">
+                    <span class="label">Vacuum</span>
+                    <span class="right_align"><asp:CheckBox ID="chkVacuum" runat="server" /></span>
+                </li>
+			    <li class="form-control">
+                    <span class="label">Laundry</span>	
+                    <span class="right_align"><asp:CheckBox ID="chkLaundry" runat="server" /></span>
+			    </li>		               
+                <li class="form-control">
+                    <span class="label">Garage&nbsp;</span>
+                    <span class="right_align"><asp:CheckBox ID="chkGarage" runat="server" /></span>
+                </li>
+                <li class="form-control">
+                    <span class="label">Dishes</span>               
+                    <span class="right_align"><asp:CheckBox ID="chkDishes" runat="server" /></span>
+                </li>
+		    </ul>
+            </div>
+        </div>
+        </div>
+					    
+        <div class="first">
+            <span class="flbl">Date Required</span>
+			<span class=""><asp:TextBox ID="txtDtRequired" CssClass="rightAlign" runat="server" TextMode="DateTime" Width="64px" required></asp:TextBox></span>
+        </div>
+        <div class="second">
+			<span class="slbl">Start time</span>
+			<span class=""><asp:TextBox ID="txtStartTime" CssClass="rightAlign" runat="server" TextMode="DateTime" Width="64px" required></asp:TextBox></span>
+        </div>
+                        
+				<asp:Button ID="btnCalculate" runat="server" OnClick="btnCalculate_Click" Text="Calculate" CssClass="btn btn-info" />
                 <asp:ScriptManager ID="ScriptManager1" runat="server">
                 </asp:ScriptManager>			    
                 <asp:UpdatePanel ID="updPrice" runat="server">
@@ -124,15 +80,10 @@
                         <asp:AsyncPostBackTrigger ControlID="btnCalculate" EventName="Click" />
                     </Triggers>
                 </asp:UpdatePanel>
-			</td>
-		</tr>
-		<tr>
-			<td colspan="2" class="bottom">
-				<asp:Button ID="Button1" runat="server" CssClass="fancybuttoncancel" Text="Cancel" />
-                <asp:Button ID="btnCreateJob" runat="server" Text="Create Job" CssClass="auto-style2" OnClick="btnCreateJob_Click" Width="82px" />
-			</td>
-		</tr>
-    </table>
+
+				<asp:Button ID="Button1" runat="server" class="btn btn-info" CssClass="btn btn-info" Text="Cancel" />
+                <asp:Button ID="btnCreateJob" runat="server" Text="Create Job" CssClass="btn btn-info" OnClick="btnCreateJob_Click" />
+    </div>
     <p id="message">
         <asp:Label ID="lblError" runat="server" Font-Bold="True" ForeColor="Red"></asp:Label><br />
         <asp:Label ID="lblMessage" runat="server" ForeColor="#006600" Font-Bold="True"></asp:Label><br />

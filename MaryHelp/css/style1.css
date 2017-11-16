@@ -1,0 +1,278 @@
+body{
+    margin: 0 auto;
+}
+.navbar {
+    margin-bottom: 10px;
+    background-color: #2b9093;
+    height: 100px;
+}
+.navbar-nav {
+    background-color: #2b9093;
+}
+.centralcontainer {
+    max-width: 400px;
+}
+.navbar-collapse {
+    margin-top: 15px;
+}
+.navbar-brand {
+    position: absolute;
+}
+.navbar-nav, .nav, .navbar-right, .navbar-header, .container, .navbar, .navbar-inverse {
+    border: none !important;
+}
+.contentJobOffer {
+    padding: 20px 35px 20px 0;
+    margin: 20px;
+    border: 1px solid #297787;
+    box-shadow: 2px;
+    border-radius: 5px;
+    background-color: #eeeeee;
+    width: 300px;
+}
+.rightAlign {
+    float: right;
+    border-color: #297787;
+}
+.signup {
+    width: 370px;
+    box-shadow: none;
+    border-radius: 5px;
+    margin-left: -30px;
+    margin-right: -20px;
+    background: #eeeeee;
+}
+.signup ul .form-control {
+    border: none;
+    background-color: #eeeeee;
+    margin-left: -20px;
+
+} 
+
+.form-group ul li {
+    display: inline-block;
+    width: 100%;
+    padding: 5px;
+}
+
+
+.list-group-horizontal .list-group-item {
+    display: inline-block;
+}
+.list-group {
+    float: right;
+}
+.list-group-item {
+    background-color: #2b9093;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+}
+    .list-group-item a {
+        text-decoration: none;
+        color: #474747 !important;
+        font-weight: bold;
+    }
+        .list-group-item a:hover {
+            color: #fff !important;
+            transition: .5s;
+        }
+        .form-group a{
+            margin-left: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #474747;
+        }
+        .form-group a:hover{
+            color: #2b9093;
+            transition: .5s;
+        }
+.container {
+    margin-right: 0;
+}
+.gree {
+    text-align: right;
+    margin: 0 0 0 50px;
+
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+li {
+    list-style-type: none;
+    padding: 5px;
+}
+blocks{
+    margin: 10px;
+    padding: 10px;
+}
+.rightBlock, .leftBlock {
+    margin: 10px;
+}
+
+.leftBlock {
+    float: left;
+    max-width: 400px;
+}
+.rightBlock {
+    margin-left: 0px;
+    float: left;
+    width: 265px;
+}
+.rightBlock ul li{
+    width: 100%;
+    margin-bottom: 5px;
+}
+.right {
+    text-align: right;
+    /*display: inline-block;*/
+    /*float: right;*/
+    /*margin-left: 40px;*/
+}
+.right_align {
+    float: right;
+}
+.first, .second{
+    margin: 10px 5px;
+}
+.first .flbl, .second .slbl{
+    margin-left: 40px;
+}
+
+.label {
+    margin-right: 20px;
+    color: black !important;
+    float: left;
+}
+h2{
+    text-align: center;
+    padding: 0px 0 10px 10px;
+}
+.header h2 {
+    text-align: left;
+    color: #474747 !important;
+}
+.header{
+    text-align: left;
+}
+
+.navbar-collapse {
+    width: 100%;
+} 
+.navbar-collapse, .collapse, .nav, .navbar-nav, .navbar-right {
+    border-radius: 5px;
+}
+
+.centralcontainer {
+    margin: 0 auto;
+    margin-top: 50px;
+    /*padding-left: 30px;*/
+}
+.main_content {
+    max-width: 270px;
+}
+.form-control {
+    width: 100%;
+}
+
+.btn-login {
+    background-color: #2b9093;
+    width: 100%;
+    color: #474747;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.btn-login:hover{
+    color: #fff;
+}
+.btn-ngh {
+
+    /*display: inline !important;*/
+    width: 140px !important;
+}
+.btn-city {
+    display: inline !important;
+    width: 70px !important;
+}
+.error_msg {
+    width: 270px;
+}
+footer {
+    margin-top: 50px;
+    color: #474747;
+    padding-top: 28px;
+    display: inline-block;
+    text-align: center;
+    background-color: #2b9093;
+    width: 100%;
+    height: 70px;
+    /*vertical-align: middle;*/
+}
+
+/*form checkboxes only*/
+input[type=checkbox] {
+    position: relative;
+    cursor: pointer;
+    box-sizing: border-box;
+    display: inline;
+    top: 0;
+    margin-left: -25px;
+    margin-right: 5px;
+    padding: 0;
+    width: 15px;
+    height: 15px;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    -moz-appearance: checkbox;
+    -webkit-appearance: checkbox
+}
+
+    input[type=checkbox]:focus {
+        border: 1px solid #297787;
+    }
+
+    input[type=checkbox]:before {
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+        content: "";
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        z-index: 1;
+        width: 18px;
+        height: 18px;
+        border: 2px solid #297787;
+        box-sizing: border-box;
+    }
+
+    input[type=checkbox]:checked:before {
+        -ms-transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        height: 9px;
+        border-color: #297787;
+        border-top-style: none;
+        border-right-style: none
+    }
+
+    input[type=checkbox]:focus:before {
+        border-color: #297787
+    }
+
+    input[type=checkbox]:after {
+        content: "";
+        position: absolute;
+        top: -4px;
+        left: -4px;
+        width: 24px;
+        height: 24px;
+        background: #fff;
+        cursor: pointer;
+        box-sizing: border-box
+    }
+
+
+    /*form checkboxes only END*/
